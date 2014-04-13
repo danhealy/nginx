@@ -28,7 +28,10 @@ unless packages.empty?
   end
 end
 
-gem_package 'rake'
+gem_package 'rake' do
+  action :install
+  ignore_failure true
+end
 
 gem_package 'passenger' do
   action     :install
